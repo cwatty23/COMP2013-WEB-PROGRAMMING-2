@@ -1,0 +1,19 @@
+import './App.css'
+//import HelloWorld from './Components/HelloWorld'
+import Card from './Components/Card'
+function App() {
+  
+
+  return (
+    <>
+      <h1>Diamond World</h1>
+      <div className="main-container">
+        <Card image="src\assets\images\1.jpg" name="princess" price="$1,350"/>
+        <Card image="src\assets\images\2.jpg" name="swan" price="$900" sale={true}/>
+        <Card image="src\assets\images\3.jpg" name="collection" price="$1,100" sale={true}/>
+      </div>
+    </>
+  )
+}
+
+export default App
