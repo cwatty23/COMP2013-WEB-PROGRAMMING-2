@@ -1,0 +1,94 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #d2c5c5;
+}
+
+.Card-Component{
+  padding: 10px;
+  padding-top: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.main-container{
+  background: rgb(194, 194, 194);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  gap:20px;
+
+}
+
+.Rating-Green{
+  color: rgb(1, 183, 1);
+}
+
+.Rating-Red{
+  color: red;
+}
+
+.Country{
+  color: black;
+}
+
+.Hotel{
+  color:rgb(94, 94, 94);
+}
+
+.Card-Component p {
+  margin: auto;
+}
+
+.Price{
+  color:rgb(94, 94, 94);
+}
+
+@media screen and (max-width: 600px){
+  .main-container{
+    flex-direction: column;
+    width: 300px;
+    text-align: center;
+    margin: auto;
+  }
+}
