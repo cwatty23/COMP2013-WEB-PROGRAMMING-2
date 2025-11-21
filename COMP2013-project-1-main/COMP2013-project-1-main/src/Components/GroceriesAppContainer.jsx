@@ -67,18 +67,15 @@ export default function GroceriesAppContainer({data}){
         setCart(filteredCart);
     }
 
-    //function to clean $ out of price
     const removeDollarSign = (price) => {
         return parseFloat(price);
     }
-    //function for product total
     const handleProductTotal = (price, quantity) => {
         const productPrice = parseFloat(price);
         const productQuantity = quantity;
         return productPrice * productQuantity;
     }
 
-    //function for cart total
     const handleCartTotal = (items) => {
         let cartTotal = 0;
         items.forEach((item) => {
@@ -87,7 +84,6 @@ export default function GroceriesAppContainer({data}){
         return cartTotal;
     }
 
-    //function for adding and removing inside cart
        const handleCartIncrementation = (id) => {
         setCart((prevCart) => {
             return prevCart.map((prod) => {
