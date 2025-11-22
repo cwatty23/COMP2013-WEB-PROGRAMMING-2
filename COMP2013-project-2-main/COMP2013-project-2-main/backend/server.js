@@ -37,4 +37,42 @@ server.get("/products", async (request, response) =>{
     } catch(error){
         response.status(500).send({message: error.message})
     }
+});
+//to post a new product to the db
+server.post("/products", async (request, response) => {
+    const {productName, brand, image, price} = request.body;
+    const newProduct  = new Product({
+        productName,
+        brand,
+        image,
+        price,
+    });
+    try{
+        await newProduct.save();
+        response.status(200).send({message: "Product had been successfully added"})   
+     } catch(error){
+        response.status(400).send({message: error.message})
+    }
+})
+
+//to delete a product from th db by its id
+server.delete("/products/:id", async (request, response) => {
+    const {id} = request.params
+    try{
+        await Product.findByIdAndDelete(id);
+        response.send({message: "Product has been successfully deleted"})
+    } catch(error){
+        response.status(400).send({message: error.message })
+    }
+})
+
+//to get one product by id
+server.get("/products/:id", async(request, response) =>{
+    const { id } = request.params;
+    try{
+        const productToEdit = await Product.findById(id);
+        response.send(productToEdit);
+    } catch(error){
+        response.status(500).send({ message: error.message });
+    }
 })

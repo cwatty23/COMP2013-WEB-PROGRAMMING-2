@@ -46,6 +46,11 @@
   /* border: 1px solid white; */
 }
 
+.ProductForm{
+ display: flex;
+ margin-right: auto;
+}
+
 .CartContainer {
   width: 25%;
   justify-content: center;
